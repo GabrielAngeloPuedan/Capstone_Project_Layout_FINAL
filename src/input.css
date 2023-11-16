@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Croissant+One&family=Dancing+Script&family=Kanit:ital,wght@0,300;0,400;0,500;0,700;0,800;1,200;1,300;1,400;1,500;1,900&family=Mohave:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;1,400;1,500;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: poppins, 'Helvetica Neue', Helvetica, Arial;
+}
+
+:root {
+  --primary-bg-color: #98fb98;
+  --secondary-bg-color: #085c4c;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+nav {
+  background-color: #98fb98;
+}
+
+/* utilities */
+.bg--color1 {
+  background: var(--secondary-bg-color);
+}
+.bg--color2 {
+  background: var(--primary-bg-color);
+}
+
+.text--color1 {
+  color: #085c4c;
+}
+
+.hero--height {
+  height: 92vh;
+}
+.hero--text {
+  font-size: 3rem;
+}
+.hero--text2 {
+  font-size: 1rem;
+}
+.subtitle--text1 {
+  font-size: 1.5rem;
+}
+.card--text1 {
+  font-size: 1.5rem;
+}
+.card--text2 {
+  font-size: 1.05rem;
+}
+/* Carousel IMG */ /* Create a new heroIMG and change the URL path */
+.heroIMG1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/buntis1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.heroIMG2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/senior.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.heroIMG3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/pwd.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.heroIMG4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/adult.jpeg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.heroIMG5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/bata.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.heroIMG6 {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/dental.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero--height {
+    height: 15rem;
+  }
+  .hero--text {
+    font-size: 1.3rem;
+  }
+  .hero--text2 {
+    font-size: 0.7rem;
+  }
+  .subtitle--text1 {
+    font-size: 1.2rem;
+  }
+  .card--text1 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .card--text2 {
+    font-size: 0.9rem;
+  }
+}

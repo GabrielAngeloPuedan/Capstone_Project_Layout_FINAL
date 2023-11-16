@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Appointment Form</title>
+  </head>
+
+  <body class="bg-gray-200 flex items-center justify-center h-screen">
+    <div class="w-full max-w-lg bg-white rounded-lg overflow-hidden shadow-2xl">
+      <div class="p-6">
+        <h1 class="text-2xl font-bold mb-4">Appointment Form</h1>
+
+        <!-- Appointment Form -->
+        <form class="grid grid-cols-3 gap-4 w-full">
+          <!-- Last Name -->
+          <div class="mb-4">
+            <label
+              for="last_name"
+              class="block text-gray-700 text-sm font-bold mb-2"
+              >Last Name:</label
+            >
+            <input
+              type="text"
+              id="last_name"
+              name="last_name"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+
+          <!-- First Name -->
+          <div class="mb-4">
+            <label
+              for="first_name"
+              class="block text-gray-700 text-sm font-bold mb-2"
+              >First Name:</label
+            >
+            <input
+              type="text"
+              id="first_name"
+              name="first_name"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+
+          <!-- Middle Name -->
+          <div class="mb-4">
+            <label
+              for="middle_name"
+              class="block text-gray-700 text-sm font-bold mb-2"
+              >Middle Name:</label
+            >
+            <input
+              type="text"
+              id="middle_name"
+              name="middle_name"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+
+          <!-- Date -->
+          <div class="mb-4">
+            <label
+              for="appointment_date"
+              class="block text-gray-700 text-sm font-bold mb-2"
+              >Date:</label
+            >
+            <input
+              type="date"
+              id="appointment_date"
+              name="appointment_date"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+
+          <!-- Services -->
+          <div class="mb-4">
+            <label
+              for="services"
+              class="block text-gray-700 text-sm font-bold mb-2"
+              >Services:</label
+            >
+            <select
+              id="services"
+              name="services"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            >
+              <option value="">Select a service</option>
+              <option
+                value="Monday: For adults"
+                class="font-bold"
+              >
+                Monday: Adults
+              </option>
+              <option value="Tuesday: For kids">Tuesday: Kids</option>
+              <option value="Wednesday: Pregnant">Wednesday: Pregnant</option>
+              <option value="Thursday: Senior-citizen">
+                Thursday: Senior-citizen
+              </option>
+              <option value="Friday: PWD">Friday: PWD</option>
+              <option value="Saturday: Free Dental Checkup">
+                Saturday: Free Dental Checkup
+              </option>
+              <!-- Add more service options as needed -->
+            </select>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="flex items-center justify-start col-span-3">
+            <button
+              type="button"
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              onclick="showModal()"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="flex fixed inset-0 bg-gray-800 bg-opacity-75 hidden items-center justify-center"
+    >
+      <div class="bg-white p-6 rounded shadow-md mx-auto text-center">
+        <p class="text-2xl font-bold mb-4">Here is your queue number!</p>
+        <p class="text-lg font-bold mb-4">
+          This queue number is only valid for today.
+        </p>
+        <p class="text-9xl font-bold mb-4">2</p>
+        <!-- You can display the queue number or any other relevant information here -->
+        <button
+          class="bg-blue-500 text-white py-2 px-4 rounded"
+          onclick="hideModal()"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function showModal() {
+        document.getElementById('modal').classList.remove('hidden');
+      }
+
+      function hideModal() {
+        document.getElementById('modal').classList.add('hidden');
+      }
+    </script>
+  </body>
+</html>
